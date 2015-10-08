@@ -6,20 +6,10 @@ image:
   credit: dargadgetz
   creditlink: "http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/"
 comments: false
-modified: {}
+modified: 2015-10-08T00:00:00.000Z
 published: true
 ---
 
----
-layout: page
-title: About the Jekyll Theme
-image:
-  feature: abstract-5.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
-comments: false
-modified: 2015-10-08
----
 Hi, my name is Harshali Singh and I am a Computer Science Graduate student at Northeastern University living in Boston, MA. I am passionate about Software Development, Product Management, Data Science and Machine Learning. 
 
 I am currently working at Boston Consulting Group in the Business Systems Group as a Software Engineering Co-op. I am primarily responsible for building enhancements to existing BCG's finance applications and developing new Administrative features using ASP.NET MVC, Entity Framework, NHibernate, JQuery, etc.
