@@ -1,471 +1,76 @@
+---
+layout: post-index
+title: Latest Posts
+description: "Describe this nonsense."
+tags: [Jekyll, theme, themes, responsive, blog, modern]
+comments: false
+image:
+  feature: abstract-1.jpg
+  credit: dargadgetz
+  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+---
 
+{% for post in paginator.posts %}
+<article class="hentry">
+  <header>
+    {% if post.image.feature %}
+      <div class="entry-image-index">
+        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}"></a>
+      </div><!-- /.entry-image -->
+    {% endif %}
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard"><span class="fn"><a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
+      {% if site.reading_time %}
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        {% assign readtime = post.content | number_of_words | divided_by:site.words_per_minute %}
+        Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}
+      </span><!-- /.entry-reading-time -->
+      {% endif %}
+    </div><!-- /.entry-meta -->
+    {% if post.link %}
+      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}"><i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h1>
+    {% else %}
+      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
+    {% endif %}
+  </header>
+  <div class="entry-content">
+    {{ post.content }}
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+{% endfor %}
 
-<!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
-<head>
-    <title>Vasisht Raghavendra E Resume</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Responsive HTML5 Website landing Page for Developers">
-    <meta name="author" content="3rd Wave Media">    
-    <link rel="shortcut icon" href="favicon.png">  
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="assetsv1/plugins/bootstrap/css/bootstrap.min.css">   
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assetsv1/plugins/font-awesome/css/font-awesome.css">   
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assetsv1/css/styles.css">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style type="text/css">
-    .navbar-md {min-height:26px}
-    .navbar-md .navbar-brand,
-    .navbar-md .navbar-nav>li>a {padding-top:10px; padding-bottom:0px}
-    .navbar-md .navbar-brand {height: 42px}  
-    .navbar-md .navbar-toggle .icon-bar {width: 15px;}
-    .navbar-sm {min-height:22px}
-    .navbar-sm .navbar-brand,
-    .navbar-sm .navbar-nav>li>a {padding-top:0px; padding-bottom:0px}
-    .navbar-sm .navbar-brand {height: 22px}
-    .navbar-sm .navbar-toggle {margin:0px; padding:0px;}
-    .navbar-sm .navbar-toggle .icon-bar {width: 16px;}
-    </style>
-</head> 
-
-<body>
-    <!-- ******HEADER****** --> 
-    <nav class="navbar navbar-default navbar-md navbar-fixed-bottom">
-        <div class="container-fluid" align="center">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" style="font-size:16px;" href="#home"><i class="fa fa-home"></i> Home</a>
-                <a class="navbar-brand" style="font-size:16px;" href="#contact"><i class="fa fa-paper-plane"></i> Get in Touch</a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a class="navbar-brand" style="font-size:15px;" href="#about"><i class="fa fa-info-circle"></i> About Me</a>
-                        </li>
-                        <li>
-                            <a class="navbar-brand" style="font-size:15px;" href="#education"><i class="fa fa-graduation-cap"></i> Education</a>
-                        </li>
-                        <li>
-                            <a class="navbar-brand" style="font-size:15px;" href="#experience"><i class="fa fa-briefcase"></i> Experience</a>
-                        </li>
-                        <li>
-                            <a class="navbar-brand" style="font-size:15px;" href="#coursework"><i class="fa fa-book"></i> Coursework</a>
-                        </li>
-                        <li>
-                            <a class="navbar-brand" style="font-size:15px;" href="#research"><i class="fa fa-search"></i> Research</a>
-                        </li>
-                        <li>
-                            <a class="navbar-brand" style="font-size:15px;" href="#hacks"><i class="fa fa-h-square"></i> Hacks</a>
-                        </li>
-                        <li>
-                            <a class="navbar-brand" style="font-size:15px;" href="#activities"><i class="fa fa-wrench"></i> Activities</a>
-                        </li>
-                        <li>
-                            <a class="navbar-brand" style="font-size:15px;" href="#projects"><i class="fa fa-lightbulb-o"></i> Projects</a>
-                        </li>
-                        <li>
-                            <a class="navbar-brand" style="font-size:15px;" href="#skills"><i class="fa fa-plus"></i> Skills</a>
-                        </li>
-                    </ul>
-            </div>
-        </div>
-    </nav>
-    <header class="header" id="home">
-        <div class="container">                       
-            <img class="profile-image img-responsive pull-left" height="155" width="155" src="assetsv1/images/VasishtRaghavendra.jpg" alt="Vasisht Raghavendra" />
-            <div class="profile-content pull-left">
-                <h1 class="name">Vasisht Raghavendra</h1>
-                <h2 class="desc">Graduate Student at University of Southern California</h2>   
-                <ul class="social list-inline">
-                    <li><a href="https://www.linkedin.com/pub/vasisht-raghavendra/a7/388/1aa" target="_blank"><i class="fa fa-linkedin"></i></a></li>                   
-                    <li><a href="https://www.github.com/vraghave" target="_blank"><i class="fa fa-github"></i></a></li>
-                    <li><a href="https://plus.google.com/110984574229321798037" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="https://www.facebook.com/vasisht.raghavendra" target="_blank"><i class="fa fa-facebook"></i></a></li>                               
-                </ul> 
-            </div><!--//profile-->
-        </div><!--//container-->
-    </header><!--//header-->
-    
-    <div class="container sections-wrapper">
-        <div class="row">
-            <div class="primary col-md-7 col-sm-12 col-xs-12">
-                <section class="about section" id="about">
-                    <div class="section-inner">
-                        <h2 class="heading">About Me</h2>
-                        <div class="content" style="text-align:justify;">
-                            <p>I am a Graduate Student majoring in Computer Science. My interests lie in the field of Data Science.</p>
-                            <p>I first developed an interest for Data Science in college, when I was introduced to this fascinating subject. It intrigued me to see a program’s capability when applied on large sets of data comprising of a variety of types.  Ever since then, this field has held my fascination and made me delve into the depths of this mysterious subject.</p>
-                            <p>Along with the coursework, I enjoy working on Kaggle competitions as hobby projects and hacks using R programming and Python. I also spend some time customising websites for friends and developing android applications.</p>
-                            <p>Besides academics my interests include browsing the web about bizzare things, start-ups and how stuff work. I also enjoy travelling a lot, be it alone or in a group. Listening to music and dancing are also my favorite pastimes.</p>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </section><!--//section-->
-                <section class="experience section" id="experience">
-                    <div class="section-inner">
-                        <h2 class="heading">Professional Experience</h2>
-                        <div class="content">
-                            <div class="item" style="text-align:justify;">
-                                <h3 class="title"><a href="http://pinsightmedia.com/"  target="_blank">PinsightMedia+, Kansas City</a><span class="place"> - Data Science Intern</span></h3>
-                                <span class="year"  style="font-size:14px;"><i class="fa fa-calendar"></i> May 2015 - August 2015</span>
-                                <p>Worked in a start-up environment in the Product and Technology Development division on a deduplication project. The goal of this project was to identify unique persons from the data (from multiple datasets) of Pinsight by employing fuzzy matching algorithms and to create a unique PinsightMedia ID for them. The data was cleaned and prepared using Hive and Python and a deduplication framework was built usng Java on Spark framework. R, Pandas and Graphlab were used to analyze the data and generate reports.</p>
-                            </div><!--//item-->
-                            <div class="item" style="text-align:justify;">
-                                <h3 class="title"><a href="http://www.ciber.com/in"  target="_blank">CIBERsites India Private Limited, Bangalore</a><span class="place"> - Intern</span></h3>
-                                <span class="year"  style="font-size:14px;"><i class="fa fa-calendar"></i> December 2013 - May 2014</span>
-                                <p>Worked on the SAP Basis/Netweaver technology and underwent trainings on SAP Solutions and System Landscape, Installation Basics, Database concepts, Upgrades, Java Administration, Solution Manager, High Availability concept, System Monitoring etc. Later, was a part of a team to support multiple clients. My responsibilities included monitoring the SAP systems health by running the daily monitoring T Codes and in the event of any failure, fix the system by making suitable changes and generate a report.</p>
-                            </div><!--//item-->
-                            <div class="item" style="text-align:justify;">
-                                <h3 class="title"><a href="http://www.bizosys.com" target="_blank">Bizosys Technologies Private Limited, Bangalore</a><span class="place"> - Software Intern</h3>
-                                </span> <span class="year" style="font-size:14px;"><i class="fa fa-calendar"></i> August 2013 - December 2013</span>
-                                <p>Worked in a start-up environment as a part of a live project, <span style="font-style:italic;">ShopGirl</span>, which involved crawling European fashion portal sites using Nutch crawler to collect the data about their various products. The data was then cleansed using Javascript and mapped on to the different properties. This was then uploaded on to Hadoop on which MapReduce was used to standardize. The ultimate goal of the project was to create a master portal of the crawled sites.</p>
-                            </div><!--//item-->
-                            
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </section><!--//section-->
-    
-               <section class="latest section" id="research">
-                    <div class="section-inner">
-                        <h2 class="heading">Research Projects</h2>
-                        <div class="content">    
-                                               
-                            <div class="item featured text-center">
-                                <h3 class="title">USC Experience Lab</h3>
-                                <p class="summary">A research related to player engagement in video games<br /><span class="year"><i class="fa fa-calendar"></i> January 2015 - May 2015</span></p>                      
-                                <div class="desc text-left"  style="text-align:justify;">                                    
-                                    <p>This project was carried out at the USC GamePipe Laboratory. The project involved conducting research related to player engagement in video games to help understand how players interact with games on both physical and mental levels with the ultimate aim of apprehending how to personalize game content for different types of players.</p>
-                                    <p>The gamers were made to play video games and data about their various movements and reactions were captured using sensors by the data capture team.</p>
-                                    <p>I as a part of the data storage team was responsible for integrating the data collected by the various sensors, storing the integrated data and backing it up and running analysis on the data to study the various complexities involved during the gameplay.</p/>
-                                </div><!--//desc-->     
-                            </div><!--//item-->
-                            <hr class="divider" />
-                            <div class="item featured text-center">
-                                <h3 class="title">Data for Development: The analysis and Visualization of Mobile phone data</h3>
-                                <p class="summary">Orange Telecom's challenge for socio-economic developement of Ivory Coast<br /><span class="year"><i class="fa fa-calendar"></i> January 2013 - June 2013</p>
-                                <div class="featured-image">
-                                    <a href="assetsv1/images/projects/IvoryCoast_D4D_Colage.jpg"><img class="img-responsive project-image pull-center" src="assetsv1/images/projects/IvoryCoast_D4D_Colage.jpg" alt="D4D Orange Telecom" /></a>
-                                </div>   
-                                <div class="desc text-left" style="text-align:justify;">                                    
-                                    <p>The Orange “Data for Development” - D4D - was an open data challenge, encouraging research teams around the world to use four datasets of anonymous call patterns of Orange's Ivory Coast subsidiary, to help address society development questions in novel ways by analysing the datasets and finding interesting patterns. I as a part of a team of 3 took part in the challenge.</p>
-                                    <p>We were given access to four mobile phone datasets. The datasets were based on anonymized Call Detail Records (CDR) of phone calls between five million of Orange's customers in Ivory Coast between December 1, 2011 and April 28, 2012.</p>
-                                    <p>The data was analysed by populating the HBase running on a 12 node Hadoop cluster and queried using Hive. An interactive visualization was created using D3.js after the data was verified and compared with other data sources.</p>
-                                    <p>This project resulted in us submitting a paper <i>On the Analysis and Visualization of Anonymized Call Detail Records</i> to Advanced Computing and Communications Society (ADCOM 2013).</p>
-                                </div><!--//desc-->         
-                                <a class="btn btn-cta-secondary" href="adcom2013_submission_59.pdf" target="_blank"><i class="fa fa-download"></i>Download Paper</a>               
-                            </div><!--//item-->
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </section><!--//section-->
-                
-                <section class="projects section" id="projects">
-                    <div class="section-inner">
-                        <h2 class="heading">Projects</h2>
-                        <div class="content">
-                            <div class="item row">
-                                <div class="desc col-md-12 col-sm-8 col-xs-12">
-                                    <h3 class="title">Bayesian Network to answer questions about a patient</h3>
-                                    <p style="text-align:justify;">Developed a python script to find the conditional probability of a symptom (or finding) given each of the diseases, by computing inferences in Bayesian networks of discrete random variables. The data was collected by a fairly extensive electronic medical record system, and the priori probability of the diseases was known.</p>
-                                </div><!--//desc-->                          
-                            </div><!--//item-->
-                            
-                            <div class="item row">
-                                <div class="desc col-md-12 col-sm-8 col-xs-12">
-                                    <h3 class="title">CPT for an insurance company</h3>
-                                    <p style="text-align:justify;">Developed a python script to compute the conditional probability table(CPT) given a Bayesian network of factors for a disease as a directed graph indicating the causal effect. The CPT table was used to answer few queries about the data.</p>
-                                </div><!--//desc-->                          
-                            </div><!--//item-->
-                            
-                            <div class="item row">
-                                <div class="desc col-md-12 col-sm-8 col-xs-12">
-                                    <h3 class="title">Titanic: Machine Learning from Disaster</h3>
-                                    <p style="text-align:justify;">Worked on a project at the Applied Statistics Club to analyze and predict what sorts of people are likely to survive in a disaster like the sinking of Titanic. This project was also a challenge on Kaggle. It involved developing a model to predict the likelihood of a person to survive, using R Programming and Python.</p>
-                                </div><!--//desc-->                          
-                            </div><!--//item-->
-                            
-                            <div class="item row">
-                                <div class="desc col-md-12 col-sm-8 col-xs-12">
-                                    <h3 class="title">Fine Arts Museum of San Francisco</h3>
-                                    <p style="text-align:justify;">This project involved developing a scraper using Java and JSoup to get the various artworks data from the museum website, cleaning the data using Google Open Refine and modelling and mapping the data using Karma.</p>
-                                </div><!--//desc-->                          
-                            </div><!--//item-->
-                            
-                            <div class="item row">
-                                <div class="desc col-md-12 col-sm-8 col-xs-12">
-                                    <h3 class="title">SAT Solver</h3>
-                                    <p style="text-align:justify;">Developed a boolean satisfiability solver in Python that takes a set of variables and connectives in a propositional logic statement, converts it into Conjunctive Normal Form(CNF) and returns either a satisfying assignment that would make the CNF sentence true or determines that no satisfying assignment is possible.</p>
-                                </div><!--//desc-->                          
-                            </div><!--//item-->
-                            
-                            <div class="item row">
-                                <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                    <h3 class="title">Real Estate Listing</h3>
-                                    <p style="text-align:justify;">This project was carried out as a part of the Web Technologies course during Fall 2014. It involved listing the property details using the Zillow API. The XML data returned by Zillow was parsed using a PHP script residing on Amazon Web Services Elastic Beanstalk and converted into JSON. An android application and a responsive website(using Bootstrap) were developed and a Facebook share button was provided to publish the information.</p>
-                                </div><!--//desc-->  
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <a href="assetsv1/images/projects/Zillow_Website.jpg" target="_blank"><img class="img-responsive project-image" src="assetsv1/images/projects/Zillow_Website.jpg" alt="Zillow Responsive Website" /></a>
-                                    <div>&nbsp;</div>
-                                    <a href="assetsv1/images/projects/Zillow_Android.jpg" target="_blank"><img class="img-responsive project-image" src="assetsv1/images/projects/Zillow_Android.jpg" alt="Zillow Android Application" /></a>
-                                </div>                              
-                            </div><!--//item-->
-                            
-                            <div class="item row">
-                                <div class="desc col-md-12 col-sm-8 col-xs-12">
-                                    <h3 class="title">XML Database for a Company</h3>
-                                    <p style="text-align:justify;">This project was carried out as a part of the Database Systems course during Fall 2014. It involved designing and implementing a XML database for a Company. The database was then queried by using XQuery on Altova XMLSpy 2015 tool and a XML Stylesheet was developed to transform the XML data into HTML.</p>
-                                </div><!--//desc-->                          
-                            </div><!--//item-->
-                            
-                            <div class="item row">
-                                <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                    <h3 class="title">USC Transportation Application</h3>
-                                    <p style="text-align:justify;"> This project was carried out as a part of the Database Systems course during Fall 2014. The USC Transportation Department wanted to improve their transportation services for which they had selected certain buildings inside campus and some data of student coordinates. They had also kept track of tram stops on campus used by the students. This data was provided with the intention of moving some tram stops so that they can cover maximum students and building. The spatial data was populated on Oracle 11g and a Java application was developed to query the database.</p>
-                                </div><!--//desc-->   
-                                <a class="col-md-4 col-sm-4 col-xs-12" href="assetsv1/images/projects/map.jpg" target="_blank">
-                                    <img class="img-responsive project-image" src="assetsv1/images/projects/map.jpg" alt="USC Transport Application" />
-                                </a>                                
-                            </div><!--//item-->
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </section><!--//section-->
-                
-            </div><!--//primary-->
-            <div class="secondary col-md-5 col-sm-12 col-xs-12">
-                <aside class="education aside section" id="education">
-                    <div class="section-inner">
-                        <h2 class="heading">Education</h2>
-                        <div class="content">
-                            <div class="item">                      
-                                <h3 class="title"><i class="fa fa-graduation-cap"></i> M.S. in Computer Science(Data Science)</h3>
-                                <h4 class="university" style="font-size:15px;"><a href="http://www.usc.edu/" target="_blank">University of Southern California</a><span class="pull-right"><i class="fa fa-bar-chart"></i> GPA: 3.74</span><br />Viterbi School of Engineering<br /><span class="year">Expected Graduation: May 2016</span></h4>
-                            </div><!--//item-->
-                            <div class="item">
-                                <h3 class="title"><i class="fa fa-graduation-cap"></i> B.E. in Information Science and Engineering</h3>
-                                <h4 class="university" style="font-size:15px;"><a href="http://vtu.ac.in/" target="_blank">Visvesvaraya Technological University</a><span class="pull-right"><i class="fa fa-bar-chart"></i> GPA: 3.91</span><br />SJB Institute of Technology<br /><span class="year">(September 2009 - July 2013)</span></h4>
-                            </div><!--//item-->
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-                            
-                <aside class="languages aside section" id="coursework">
-                    <div class="section-inner">
-                        <h2 class="heading">Coursework</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li class="item">
-                                    <i class="fa fa-book"></i>
-                                    <span class="title"><strong>Information Integration on the Web</strong></span>
-                                    <span class="level pull-right"><i class="fa fa-bar-chart"></i> A </span>
-                                    <p class="summary" style="text-align:justify;">This course focuses on foundations, techniques and algorithms for information extraction, modelling and integration. Topics covered include semantic web(RDF, OWL, SPARQL), linked data and service, mash-ups, theory of data integration, schema mappings, record/entity linkage, data cleaning, source modelling and information extraction.</p>
-                                </li><!--//item-->
-                                <li class="item">
-                                    <i class="fa fa-book"></i>
-                                    <span class="title"><strong>Foundations of Artificial Intelligence</strong></span>
-                                    <span class="level pull-right"><i class="fa fa-bar-chart"></i> A- </span><br />
-                                    <p class="summary" style="text-align:justify;">This course provides an overview of the field of Artificial Intelligence: foundations of symbolic intelligent systems, search, logic, knowledge representation, planning and learning.</p>
-                                </li><!--//item-->
-                                <li class="item">
-                                    <i class="fa fa-book"></i>
-                                    <span class="title"><strong>Database Systems</strong></span>
-                                    <span class="level pull-right"><i class="fa fa-bar-chart"></i> A </span>
-                                    <p class="summary" style="text-align:justify;">This course covers the essential concepts, principles, techniques, and mechanisms for the design, analysis, use and implementation of computerized database systems. Key information management concepts and techniques are examined: information modeling and representation; information interfaces - access, query, and manipulation, implementation structures, and issues of distribution.</p>
-                                </li><!--//item-->
-                                <li class="item">
-                                    <i class="fa fa-book"></i>
-                                    <span class="title"><strong>Web Technologies</strong></span>
-                                    <span class="level pull-right"><i class="fa fa-bar-chart"></i> A-  </span>
-                                    <p class="summary" style="text-align:justify;">This course focuses on the phenomenon known as the World Wide Web (WWW or Web). Its focus is to present many of the core technologies like HTML and CSS, HTTP and the Web Servers, XML, Client-side Programming Using JavaScript, Ajax and JSON (JavaScript Object Notation), Server-side Programming Using PHP, Web Services (REST), Web Security, Web Technologies for Mobile Phones, Responsive Website Design, Cloud Computing, that the Web is based upon.</p>
-                                </li><!--//item-->
-                                <li class="item">
-                                    <i class="fa fa-book"></i>
-                                    <span class="title"><strong>Analysis of Algorithms</strong></span>
-                                    <span class="level pull-right"><i class="fa fa-bar-chart"></i> B+ </span>
-                                    <p class="summary" style="text-align:justify;">This course focuses on developing an understanding for the major algorithm design techniques and their usage in solving industry problems.</p>
-                                </li><!--//item-->
-                            </ul>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-                                            
-                <aside class="projects aside section" id="hacks">
-                    <div class="section-inner">
-                        <h2 class="heading">Hacks</h2>
-                        <div class="content">
-                            <div class="item row">
-                                <div class="desc col-md-12 col-sm-8 col-xs-12">
-                                    <h3 class="title">GFit - An android application</h3>
-                                    <p class="place center" style="font-size:14px;"><i class="fa fa-thumb-tack"></i> Hackadroid'15</p>
-                                    <p style="text-align:justify;">Developed using the Google Fit API to count the number of steps walked and calories burnt by a person. The users also can choose to record their data. AChartEngine library was used to provide the dashboard for the historical data.</p>
-                                </div><!--//desc-->                          
-                            </div><!--//item-->
-                            
-                            <div class="item row">
-                                <div class="desc col-md-12 col-sm-8 col-xs-12">
-                                    <h3 class="title">Hand Tunes - An android application</h3>
-                                    <p class="place center" style="font-size:14px;"><i class="fa fa-thumb-tack"></i> HackSC 2014</p>
-                                    <p style="text-align:justify;">Used Myo, a gesture controlled armband, to develop a music player that is controlled using gestures. Used different gestures to navigate through the songs and control the volume.</p>
-                                </div><!--//desc-->                          
-                            </div><!--//item-->
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </aside><!--//section-->
-                
-                <aside class="languages aside section" id="activities">
-                    <div class="section-inner">
-                        <h2 class="heading">Technical Activities</h2>
-                        <div class="content">
-                            <div class="item featured">
-                                <h4 class="title"><a href="http://uscappliedstats.com/" target="_blank">USC Applied Statistics Club</a></h4>
-                                <p class="summary" style="text-align:justify;">As a member of the club I have been learning various programming languages and tools used for data analytics like R programming, Python Excel etc. by working on sample datasets. Also I had the opportunity to visit the DataFest held in UCLA as a mentor.</span><br /><span class="year"><i class="fa fa-calendar"></i> January 2015 - Present</p>
-                                <hr class="divider" />
-                                <h4 class="title"><a href="http://www.nicteducation.com/" target="_blank">NICT Computer Education</a></h4>
-                                <p class="summary" style="text-align:justify;">As a part of the training I have worked on various projects in Java and J2EE and gained near to industry level expertise in the subject. Also was awarded a certificate for successfully completing the course with a Distinction class.<br /><span class="year"><i class="fa fa-calendar"></i> August 2013 - November 2013</p>
-                                <div class="featured-image">
-                                    <img class="img-responsive project-image" src="assetsv1/images/projects/NICTCertificate.jpg" alt="NICT Certificate" />              
-                            </div><!--//item-->
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-                
-                <aside class="skills aside section" id="skills">
-                    <div class="section-inner">
-                        <h2 class="heading">Skills</h2>
-                        <div class="content">
-                            <p class="intro">
-                            The Internships and the courseworks have given me the experience and the exposure to the following:</p>
-                            
-                            <div class="skillset">
-                               
-                                <div class="item">
-                                    <h3 class="level-title">Java<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true">Expert</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="90%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">Scala<span class="level-label">Amateur</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="15%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">Python<span class="level-label">Intermediate</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="60%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">R Programming<span class="level-label">Intermediate</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="50%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">Hadoop, Spark &amp; MapReduce<span class="level-label">Intermediate</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="60%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">Hive &amp; SQL<span class="level-label">Pro</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="75%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">C &amp; C++<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true">Intermediate</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="50%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">Javascript &amp; jQuery<span class="level-label">Pro</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="75%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">HTML, CSS, AJAX &amp; PHP<span class="level-label">Pro</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="80%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
-                            </div>              
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </aside><!--//section-->
-               
-                <aside class="info aside section" id="contact">
-                    <div class="section-inner">
-                        <h2 class="heading">Get in Touch</h2>
-                        <div class="content">
-                            <p>If you like my work, appreciate my skills and think that I am a good fit for your company, please feel free to contact me. Also download an updated copy of my resume by clicking the download button.</p>
-                            <ul class="list-unstyled">
-                                <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span><a href="https://maps.google.com/?q=1204 W Adams Blvd, Los Angeles, CA-90007" target="_blank">1204 W Adams Blvd, Apt3, Los Angeles, CA - 90007</a></li>
-                                <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="mailto:vraghave@usc.edu">vraghave@usc.edu</a></li>
-                                <li><i class="fa fa-phone"></i><span class="sr-only"></span><a href="tel://+12135097407">(213)-509-7407</a></li>
-                                <li><a class="btn btn-cta-primary" href="Vasisht_Raghavendra_Resume.pdf" target="_blank"><i class="fa fa-download"></i> Download</a></li>
-                            </ul>
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </aside><!--//aside-->
-                             
-            </div><!--//secondary-->    
-        </div><!--//row-->
-    </div><!--//masonry-->
-    
-    <!-- ******FOOTER******
-    <footer class="footer">
-        <div class="container text-center">
-                <small class="copyright">&copy; Vasisht Raghavendra - 2015 vraghave@usc.edu</small>
-        </div>
-    </footer><!--//footer-->
- 
-    <!-- Javascript -->          
-    <script type="text/javascript" src="assetsv1/plugins/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="assetsv1/plugins/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="assetsv1/plugins/bootstrap/js/bootstrap.min.js"></script>    
-    <script type="text/javascript" src="assetsv1/plugins/jquery-rss/dist/jquery.rss.min.js"></script> 
-    <!-- custom js -->
-    <script type="text/javascript" src="assetsv1/js/main.js"></script>   
-<noscript>  
-<div style="display: block; font-family: Verdana, Geneva, Arial; font-size: 10px">
-The University of Southern California does not screen or control the content on this website and thus does not guarantee the accuracy, integrity, or quality of such content.  All content on this website is provided by and is the sole responsibility of the person from which such content originated, and such content does not necessarily reflect the opinions of the University administration or the Board of Trustees
-</div>
-</body>
-</html> 
-
+<div class="pagination">
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+      <a href="{{ site.url }}" class="btn">Previous</a>
+    {% else %}
+      <a href="{{ site.url }}/page{{ paginator.previous_page }}" class="btn">Previous</a>
+    {% endif %}
+  {% else %}
+    Previous
+  {% endif %}
+  <ul class="inline-list">
+    <li>
+      {% if paginator.page == 1 %}
+        <span class="current-page">1</span>
+      {% else %}
+        <a href="{{ site.url }}">1</a>
+      {% endif %}
+    </li>
+    {% for count in (2..paginator.total_pages) %}
+      <li>
+        {% if count == paginator.page %}
+          <span class="current-page">{{ count }}</span>
+        {% else %}
+          <a href="{{ site.url }}/page{{ count }}">{{ count }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  {% if paginator.next_page %}
+    <a href="{{ site.url }}/page{{ paginator.next_page }}" class="btn">Next</a>
+  {% else %}
+    Next
+  {% endif %}
+</div><!-- /.pagination -->
