@@ -4,9 +4,10 @@ title: About Me
 image: 
   feature: "abstract-header"
 comments: false
-modified: "2015-10-20 23:47"
+modified: 2015-10-20T00:00:00.000Z
 published: true
 ---
+
 
 
 
