@@ -5,6 +5,11 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 {% include head.html %}
+<script>
+var host = "https://harshalisingh.github.io";
+if ((host == window.location.host) && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+</script>
 </head>
 
 <body id="page" {% if page.image.feature %}class="feature"{% endif %}>
@@ -12,14 +17,20 @@
 {% include browser-upgrade.html %}
 {% include navigation.html %}
 
-{% if page.image.feature %}
 <div class="entry-header">
-  {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
-  <div class="entry-image">
-    <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
-  </div><!-- /.entry-image -->
+    <div class="image-credit">
+        Find me on:&nbsp
+        <a href="https://github.com/{{ site.github }}" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>&nbsp
+        <a href="https://twitter.com/{{ site.twitter }}" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>&nbsp
+        <a href="https://www.linkedin.com/in/{{ site.linkedin }}" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>&nbsp
+        <a href="https://plus.google.com/+{{ site.google_plus }}" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a>&nbsp
+        <a href="https://www.facebook.com/{{ site.facebook }}" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>&nbsp
+        <a href="/feed.xml"><i class="fa fa-rss-square fa-2x"></i></a>
+    </div>
+    <div class="entry-image">
+        <img src="{{ site.url }}/images/{{ page.image.feature }}.jpg" alt="{{ page.title }}">
+    </div><!-- /.entry-image -->
 </div><!-- /.entry-header -->
-{% endif %}
 
 <div id="main" role="main">
   <article class="hentry">
@@ -53,7 +64,7 @@
   </footer>
 </div><!-- /.footer-wrapper -->
 
-{% include scripts.html %}          
+{% include scripts.html %}
 
 </body>
 </html>
