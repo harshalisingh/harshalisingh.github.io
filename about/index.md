@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: "post-index"
 title: About Me
 image: 
   feature: "abstract-header"
