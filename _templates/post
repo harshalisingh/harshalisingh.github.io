@@ -1,14 +1,19 @@
 ---
-layout: {{ layout }}
-title: {{ title }}
-modified:
-categories: {{ dir }}
-description:
+layout: 
+  "[object Object]": null
+title: 
+  "[object Object]": null
+modified: null
+categories: 
+  "[object Object]": null
+description: null
 tags: []
-image:
-  feature:
-  credit:
-  creditlink:
-comments:
-share:
+image: 
+  feature: null
+  credit: null
+  creditlink: null
+comments: null
+share: null
+published: true
 ---
+
