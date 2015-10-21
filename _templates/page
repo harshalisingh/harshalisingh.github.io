@@ -1,12 +1,17 @@
 ---
-layout: {{ layout }}
-title: {{ title }}
-date: {{ date }}
-modified:
-description:
-image:
-  feature:
-  credit:
-  creditlink:
-share:
+layout: 
+  "[object Object]": null
+title: 
+  "[object Object]": null
+date: 
+  "[object Object]": null
+modified: null
+description: null
+image: 
+  feature: null
+  credit: null
+  creditlink: null
+share: null
+published: true
 ---
+
