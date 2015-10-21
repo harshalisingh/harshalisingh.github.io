@@ -2,13 +2,12 @@
 layout: page
 title: About Me
 image: 
-  feature: "abstract-5.jpg"
-  credit: dargadgetz
-  creditlink: "http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/"
+  feature: "abstract-header"
 comments: false
 modified: {}
 published: true
 ---
+
 
 
 Hi, my name is Harshali Singh and I am a Computer Science Graduate student at Northeastern University living in Boston, MA. I am passionate about Software Development, Product Management, Data Science and Machine Learning. 
@@ -20,5 +19,3 @@ Earlier, I worked at Microsoft, India for about 2 years in the ASP.NET/IIS team.
 I also have a Bachelor's Degree in Computer Engineering from Ramrao Adik Institute of Technology, University of Mumbai. 
 
 This blog is to document my learnings in software development, data science and computer science in general. I enjoy cooking, travelling, photography and watching funny cat videos.
-
-
