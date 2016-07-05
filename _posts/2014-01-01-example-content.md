@@ -1,6 +1,11 @@
 ---
 layout: post
 title: Example content
+date: 2016-07-03 16:00:00
+categories: blogging
+tags: blogging jekyll example html
+comments: true
+analytics: true
 ---
 
 
