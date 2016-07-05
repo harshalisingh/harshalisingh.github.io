@@ -1,3 +1,0 @@
-User-agent: *
-
-Sitemap: http://harshalisingh.github.io/sitemap.xml
