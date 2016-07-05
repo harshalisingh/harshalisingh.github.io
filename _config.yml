@@ -3,24 +3,37 @@ markdown:         redcarpet
 pygments:         true
 
 # Permalinks
-permalink:        pretty
+permalink:        /posts/:title/
 
 # Setup
 title:            Harshali Singh
 tagline:          '| thoughts.toString()'
 description:      'Musings of a female coder'
 url:              http://harshalisingh.github.io
+baseurl:          '/'
+paginate:         5
+excerpt_separator: '<br>'
+gems:
+- jekyll-mentions
+- jemoji
+- jekyll-redirect-from
+- jekyll-sitemap
 
+#Author
 author:
   name:           'Harshali Singh'
   url:            https://twitter.com/ItsHarshali
 
-paginate:         5
+# Social Integration
+social:
+  twitter:        ItsHarshali
+  disqus:         harshalisingh
+  addthis_pubid:  ra-577bfc50e441a1f4
 
 # Custom vars
 version:          2.0.0
 
+#Github
 github:
   repo:           https://github.com/harshalisingh/harshalisingh.github.io
 
-baseurl:          http://harshalisingh.github.io
