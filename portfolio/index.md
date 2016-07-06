@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Me
+title: Portfolio
 image: 
   feature: "abstract-5.jpg"
   credit: dargadgetz
