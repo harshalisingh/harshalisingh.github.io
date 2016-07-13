@@ -3,7 +3,7 @@ layout: page
 title: About Me
 ---
 
-<div class="circularProfilePic"></div>
+<div class="smallerCircularProfilePic"></div>
 
 <br>
 
