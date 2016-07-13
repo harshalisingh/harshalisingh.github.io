@@ -3,28 +3,14 @@ layout: page
 title: About Me
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+Hi, my name is Harshali Singh and I am a Computer Science Graduate student at Northeastern University living in Boston, MA. I am passionate about Software Development, Product Management, Data Science and Machine Learning. 
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+I am currently working at Red Hat, Raleigh office as a Product Management Intern in the JBoss Application Platforms team. I have done my previous co-op at Boston Consulting Group in the Business Systems Group as a Software Engineering Co-op. I was primarily responsible for building enhancements to existing BCG's finance applications and developing new Administrative features using ASP.NET MVC, Entity Framework, NHibernate, JQuery, etc.
 
-There are currently two themes built on Poole:
+Earlier, I worked at Microsoft, India for about 2 years in the ASP.NET/IIS team. I was hired as part of the [Microsoft Academy of College Hires](https://careers.microsoft.com/students/mach) (popularly known as MACH) program which is as an 18-24 month accelerated career development program for recently graduated students. As part of this program, I underwent intensive training on various Microsoft Products and gained leadership, networking and technical skills.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+I also have a Bachelor's Degree in Computer Engineering from Ramrao Adik Institute of Technology, University of Mumbai. 
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+This blog is to document my learnings in software development, data science and computer science in general. I enjoy cooking, travelling, photography and watching funny cat videos. 
 
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.org), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+If you'd like can also follow me on twitter [@ItsHarshali](https://twitter.com/ItsHarshali).
