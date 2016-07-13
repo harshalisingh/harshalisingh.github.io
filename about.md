@@ -3,7 +3,13 @@ layout: page
 title: About Me
 ---
 
-Hi, my name is Harshali Singh and I am a Computer Science Graduate student at Northeastern University living in Boston, MA. I am passionate about Software Development, Product Management, Data Science and Machine Learning. 
+<div class="circularProfilePic"></div>
+
+<br>
+
+{% include addthis_follow_me.html %}
+
+Hi, my name is Harshali Singh and I am a Computer Science Graduate student at Northeastern University living in Boston, MA. My interests currently revolve around Data Science, Big Data Analytics, Software Development, Product Management and Machine Learning. 
 
 I am currently working at Red Hat, Raleigh office as a Product Management Intern in the JBoss Application Platforms team. I have done my previous co-op at Boston Consulting Group in the Business Systems Group as a Software Engineering Co-op. I was primarily responsible for building enhancements to existing BCG's finance applications and developing new Administrative features using ASP.NET MVC, Entity Framework, NHibernate, JQuery, etc.
 
@@ -11,6 +17,6 @@ Earlier, I worked at Microsoft, India for about 2 years in the ASP.NET/IIS team.
 
 I also have a Bachelor's Degree in Computer Engineering from Ramrao Adik Institute of Technology, University of Mumbai. 
 
-This blog is to document my learnings in software development, data science and computer science in general. I enjoy cooking, travelling, photography and watching funny cat videos. 
+This blog is to document my learnings in software development, data science and computer science in general. I enjoy traveling, DIY craft projects and watching funny cat videos. 
 
-If you'd like can also follow me on twitter [@ItsHarshali](https://twitter.com/ItsHarshali).
+If you'd like, you can also follow me on twitter [@ItsHarshali](https://twitter.com/ItsHarshali).
