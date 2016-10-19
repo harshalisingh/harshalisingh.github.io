@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## CS 7280: Special Topics in Information Visualization
 ### Homework 3 - Part 2: Color Maps
