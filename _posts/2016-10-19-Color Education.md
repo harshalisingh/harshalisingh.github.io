@@ -26,7 +26,7 @@ There are three main types of Color Maps and we will see examples of visualizati
 	The sequential color maps (also known as ordinal or saturation color maps) are (nearly) monochromatic. They range from a heavily saturated color to various levels of unsaturation. Luminance is also often increased as saturation is decreased so that the color map terminates in a color at or close to white. The monotonic nature of the saturation level maps well to a scalar value.
     
     A visualization example of an appropriate use of Sequential Color Map
-    ![Independent Farms in the USA]({{site.baseurl}}/assets/images/sequential_good.png)
+    <p><img src="/assets/images/sequential_good.PNG" alt="sequential_good.PNG" /></p>
     
     A visualization example of an inappropriate use of Sequential Color Map
     ![US Population of Different States by Age Group]({{site.baseurl}}/assets/images/sequential_bad.png)
