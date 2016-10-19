@@ -3,7 +3,7 @@ published: true
 layout: post
 date: 2016-10-19T15:00:00.000Z
 categories: blogging
-tags: homework data-visualization color-maps
+tags: homework data-visualization color-maps d3.js
 comments: true
 analytics: true
 ---
