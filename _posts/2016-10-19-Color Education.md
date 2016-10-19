@@ -20,6 +20,7 @@ There are three main types of Color Maps and we will see examples of visualizati
     - A visualization example of an appropriate use of Categorical Color Map
     <p><img src="../../assets/images/categorical_good.PNG" alt="categorical_good.PNG" /></p>
     
+    </br>
     - A visualization example of an inappropriate use of Categorical Color Map
     <p><img src="../../assets/images/categorical_bad.PNG" alt="categorical_bad.PNG" /></p>
     
