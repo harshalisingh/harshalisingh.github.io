@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: 2016-10-19T15:00:00.000Z
+date: {}
 categories: blogging
 tags: homework data-visualization color-maps d3.js
 comments: true
@@ -26,10 +26,10 @@ There are three main types of Color Maps and we will see examples of visualizati
 	The sequential color maps (also known as ordinal or saturation color maps) are (nearly) monochromatic. They range from a heavily saturated color to various levels of unsaturation. Luminance is also often increased as saturation is decreased so that the color map terminates in a color at or close to white. The monotonic nature of the saturation level maps well to a scalar value.
     
     A visualization example of an appropriate use of Sequential Color Map
-    ![Independent Farms in the USA]({{site.baseurl}}/_posts/sequential_good.png)
+    ![Independent Farms in the USA]({{site.baseurl}}/assets/image/sequential_good.png)
     
     A visualization example of an inappropriate use of Sequential Color Map
-    ![US Population of Different States by Age Group]({{site.baseurl}}/_posts/sequential_bad.png)
+    ![US Population of Different States by Age Group]({{site.baseurl}}/assets/image/sequential_bad.png)
     
 3. **Diverging Color Map**
 	The diverging color maps (also known as ratio, bipolar, or double-ended) have two major color components. The map transitions from one color component to the other by passing through an unsaturated color (white or yellow). Diverging color maps are typically used to represent a scalar with a significant value at or near the median. For example, a color map for elevation could put sea level at white with below sea level in blue and above sea level in
