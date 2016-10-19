@@ -1,5 +1,11 @@
 ---
 published: true
+layout: post
+date: 2016-10-19T15:00:00.000Z
+categories: blogging
+tags: homework data-visualization color-maps
+comments: true
+analytics: true
 ---
 ## CS 7280: Special Topics in Information Visualization
 ### Homework 3 - Part 2: Color Maps
