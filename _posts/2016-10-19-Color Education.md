@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: 2016-10-19T11:30:00.000Z
+date: {}
 categories: blogging
 tags: homework data-visualization color-maps d3.js
 comments: true
@@ -29,9 +29,7 @@ There are three main types of Color Maps and we will see examples of visualizati
     
 - A visualization example of an appropriate use of Sequential Color Map
     
-    <p>Interactive Visualization Link: <a href="{{ site.baseurl }}_posts/sequential/good.html">Independent Farms in the USA</a></p>
-    
-    [Interactive Good]({{ site.baseurl }}_posts/sequential/good.html)
+    <p>Interactive Visualization Link: <a href="http://htmlpreview.github.io/?https://github.com/harshalisingh/harshalisingh.github.io/blob/master/_posts/sequential/good.html" target="_blank">Independent Farms in the USA</a></p>
     
     <p><img src="../../assets/images/sequential_good.PNG" alt="sequential_good.png" /></p>
     
