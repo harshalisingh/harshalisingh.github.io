@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: 2016-10-19 11:30:00.00
+date: 2016-10-20T00:00:00.000Z
 categories: visualization
 tags: homework data-visualization color-maps d3.js
 comments: true
@@ -55,7 +55,6 @@ There are three main types of Color Maps and we will see examples of visualizati
       <p><img src="../../assets/images/diverging_good.png" alt="diverging_good.png" /></p>
 
       </br>
-
-  2. A visualization example of an inappropriate use of Diverging Color Map
+   2. A visualization example of an inappropriate use of Diverging Color Map
 
         <p><img src="../../assets/images/diverging_bad.png" alt="diverging_bad.png" /></p>
