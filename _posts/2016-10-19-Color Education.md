@@ -21,10 +21,12 @@ There are three main types of Color Maps and we will see examples of visualizati
 1. A visualization example of an appropriate use of Categorical Color Map
 
     <p><img src="../../assets/images/categorical_good.png" alt="categorical_good.png" /></p>
+    <p>Data Source: CS7280-01 HW0 Class Informational Survey</p>
 
     </br>
 2. A visualization example of an inappropriate use of Categorical Color Map
       <p><img src="../../assets/images/categorical_bad.png" alt="categorical_bad.png" /></p>
+      <p>Data Source: CS7280-01 HW0 Class Informational Survey</p>
     
 
 - **Sequential Color Map**
@@ -37,6 +39,8 @@ There are three main types of Color Maps and we will see examples of visualizati
 
       <p><img src="../../assets/images/sequential_good.PNG" alt="sequential_good.png" /></p>
 
+      <p>Data Source: <a href="http://www.census.gov/support/USACdataDownloads.html#POP" target="_blank">Agriculture Data</a></p>
+
       </br>
  2. A visualization example of an inappropriate use of Sequential Color Map
 
@@ -44,6 +48,8 @@ There are three main types of Color Maps and we will see examples of visualizati
        _Please view visualization in Mozilla Firefox_
 
       <p><img src="../../assets/images/sequential_bad.PNG" alt="sequential_bad.png" /></p>
+
+      <p>Data Source: <a href="http://bl.ocks.org/mbostock/3886208" target="_blank">US Population of Different States by Age Group data</a></p>
   
   
 - **Diverging Color Map**
@@ -53,11 +59,11 @@ There are three main types of Color Maps and we will see examples of visualizati
  1. A visualization example of an appropriate use of Diverging Color Map
 
       <p><img src="../../assets/images/diverging_good.png" alt="diverging_good.png" /></p>
+      <p>Data Source: <a href="https://archive.ics.uci.edu/ml/datasets/Turkiye+Student+Evaluation" target="_blank">Turkiye Student Evaluation</a></p>
 
       </br>
  2. A visualization example of an inappropriate use of Diverging Color Map
 
-       <p>Interactive Visualization Link: <a href="http://htmlpreview.github.io/?https://github.com/harshalisingh/harshalisingh.github.io/blob/master/_posts/sequential/bad.html" target="_blank">US Population of Different States by Age Group</a></p>
-       _Please view visualization in Mozilla Firefox_
+      <p><img src="../../assets/images/diverging_bad.png" alt="diverging_bad.png" /></p>
 
-      <p><img src="../../assets/images/diverging_bad.PNG" alt="diverging_bad.png" /></p>
+      <p>Data Source: <a href="https://archive.ics.uci.edu/ml/datasets/Turkiye+Student+Evaluation" target="_blank">Turkiye Student Evaluation</a></p>
