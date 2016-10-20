@@ -19,7 +19,7 @@ There are three main types of Color Maps and we will see examples of visualizati
     
  A visualization example of an appropriate use of Categorical Color Map
 
-<p><img src="../../assets/images/categorical_good.PNG" alt="categorical_good.png" /></p>
+<p><img src="../../assets/images/categorical_good.png" alt="categorical_good.png" /></p>
 <p>Interactive Visualization Link: <a href="../sequential_good/interactive_sequential_good.html">Independent Farms in the USA</a></p>
     
     </br>
