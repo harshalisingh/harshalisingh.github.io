@@ -17,21 +17,21 @@ There are three main types of Color Maps and we will see examples of visualizati
 1. **Categorical Color Map**
 	The categorical color maps (also known as nominal color maps) are used to represent a collection of discrete, unordered classes. Since the colors have no ordering (by design), they are not appropriate for mapping a scalar variable.
     
- A visualization example of an appropriate use of Categorical Color Map
+ - A visualization example of an appropriate use of Categorical Color Map
 
 <p><img src="../../assets/images/categorical_good.png" alt="categorical_good.png" /></p>
-<p>Interactive Visualization Link: <a href="../sequential_good/interactive_sequential_good.html">Independent Farms in the USA</a></p>
     
     </br>
     
-    - A visualization example of an inappropriate use of Categorical Color Map
+ - A visualization example of an inappropriate use of Categorical Color Map
     <p><img src="../../assets/images/categorical_bad.png" alt="categorical_bad.png" /></p>
-    <a href="></a>
     
 2. **Sequential Color Map**
 	The sequential color maps (also known as ordinal or saturation color maps) are (nearly) monochromatic. They range from a heavily saturated color to various levels of unsaturation. Luminance is also often increased as saturation is decreased so that the color map terminates in a color at or close to white. The monotonic nature of the saturation level maps well to a scalar value.
     
     - A visualization example of an appropriate use of Sequential Color Map
+    
+    <p>Interactive Visualization Link: <a href="../sequential_good/interactive_sequential_good.html">Independent Farms in the USA</a></p>
     <p><img src="../../assets/images/sequential_good.png" alt="sequential_good.png" /></p>
     
     </br>
