@@ -67,3 +67,6 @@ There are three main types of Color Maps and we will see examples of visualizati
       <p><img src="../../assets/images/diverging_bad.png" alt="diverging_bad.png" /></p>
 
       <p>Data Source: <a href="https://archive.ics.uci.edu/ml/datasets/Turkiye+Student+Evaluation" target="_blank">Turkiye Student Evaluation</a></p>
+
+
+Source Code of Interactive Visualizations: [Sequential Color Maps](https://github.com/harshalisingh/harshalisingh.github.io/tree/master/_posts/sequential)
