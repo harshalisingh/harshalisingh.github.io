@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: 2016-10-19T11:30:00.000Z
+date: 2016-10-19 11:30:00.00
 categories: visualization
 tags: homework data-visualization color-maps d3.js
 comments: true
