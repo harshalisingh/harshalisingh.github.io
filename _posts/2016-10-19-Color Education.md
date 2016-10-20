@@ -43,7 +43,7 @@ There are three main types of Color Maps and we will see examples of visualizati
 
       <p><img src="../../assets/images/sequential_bad.PNG" alt="sequential_bad.png" /></p>
     
-    3. **Diverging Color Map**
+   3. **Diverging Color Map**
  
       The diverging color maps (also known as ratio, bipolar, or double-ended) have two major color components. The map transitions from one color component to the other by passing through an unsaturated color (white or yellow). Diverging color maps are typically used to represent a scalar with a significant value at or near the median. For example, a color map for elevation could put sea level at white with below sea level in blue and above sea level in
 tan. There is equal emphasis on mid-range critical values and extremes at both ends of the data range. The ordering of the colors is usually based on the context within which they are used.
