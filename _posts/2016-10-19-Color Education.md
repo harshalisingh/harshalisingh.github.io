@@ -43,7 +43,7 @@ There are three main types of Color Maps and we will see examples of visualizati
        <p>Interactive Visualization Link: <a href="http://htmlpreview.github.io/?https://github.com/harshalisingh/harshalisingh.github.io/blob/master/_posts/sequential/bad.html" target="_blank">US Population of Different States by Age Group</a></p>
        _Please view visualization in Mozilla Firefox_
 
-      <p><img src="../../assets/images/sequential_bad.PNG" alt="sequential_bad.png" /></p>
+      <p><img src="https://github.com/harshalisingh/harshalisingh.github.io/blob/master/assets/images/sequential_bad.PNG" alt="sequential_bad.png" /></p>
   
   
 - **Diverging Color Map**
