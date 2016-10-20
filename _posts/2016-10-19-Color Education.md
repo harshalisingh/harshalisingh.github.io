@@ -29,7 +29,7 @@ There are three main types of Color Maps and we will see examples of visualizati
     
 - A visualization example of an appropriate use of Sequential Color Map
     
-    <p>Interactive Visualization Link: <a href="../sequential_good/interactive_sequential_good.html">Independent Farms in the USA</a></p>
+    <p>Interactive Visualization Link: <a href="{{ site.baseurl }}_posts/good/good.html">Independent Farms in the USA</a></p>
     
     [Interactive Good]({{ site.baseurl }}_posts/sequential/good.html)
     
