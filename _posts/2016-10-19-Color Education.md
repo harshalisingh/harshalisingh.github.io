@@ -18,7 +18,8 @@ There are three main types of Color Maps and we will see examples of visualizati
 	The categorical color maps (also known as nominal color maps) are used to represent a collection of discrete, unordered classes. Since the colors have no ordering (by design), they are not appropriate for mapping a scalar variable.
     
     - A visualization example of an appropriate use of Categorical Color Map
-    Interactive Visualization Link: [Independent Farms in the USA](sequential_good/interactive_sequential_good.html)
+    
+    <p>Interactive Visualization Link: [Independent Farms in the USA](sequential_good/interactive_sequential_good.html)</p>
     
     <p><img src="../../assets/images/categorical_good.PNG" alt="categorical_good.PNG" /></p>
     </br>
