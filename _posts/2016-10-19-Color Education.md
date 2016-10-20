@@ -31,7 +31,7 @@ There are three main types of Color Maps and we will see examples of visualizati
     
     <p>Interactive Visualization Link: <a href="../sequential_good/interactive_sequential_good.html">Independent Farms in the USA</a></p>
     
-    [good/good.html](Interactive Good)
+    [Interactive Good](good/goot.html)
     
     <p><img src="../../assets/images/sequential_good.png" alt="sequential_good.png" /></p>
     
