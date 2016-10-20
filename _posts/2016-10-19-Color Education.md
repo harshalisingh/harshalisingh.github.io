@@ -61,6 +61,7 @@ There are three main types of Color Maps and we will see examples of visualizati
       <p><img src="diverging/diverging_good.png" alt="diverging_good.png" /></p>
 
       </br>
+
   2. A visualization example of an inappropriate use of Diverging Color Map
 
-      <p><img src="diverging/diverging_bad.png" alt="diverging_bad.png" /></p>
+    <p><img src="diverging/diverging_bad.png" alt="diverging_bad.png" /></p>
