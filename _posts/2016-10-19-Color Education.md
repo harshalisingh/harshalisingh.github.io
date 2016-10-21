@@ -70,3 +70,5 @@ There are three main types of Color Maps and we will see examples of visualizati
 
 
 Source Code of Interactive Visualizations: [Sequential Color Maps](https://github.com/harshalisingh/harshalisingh.github.io/tree/master/_posts/sequential)
+
+Authors: Harshali Singh, Vishal Mehta, Bhavin Vora
