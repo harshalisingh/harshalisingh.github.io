@@ -21,13 +21,13 @@ The idea of linking and brushing is to combine different visualization methods t
       <p>Data Source: <a href="http://www.investing.com/currencies/usd-inr-historical-data" target="_blank">USD/INR Historical Data</a></p> 
 
       Dataset snapshot:
-      <p><img src="../../_posts/hw4/dataset1.png" alt="usd-inr-historical-data.png" /></p>
+      <p><img src="../../assests/images/dataset1.png" alt="usd-inr-historical-data.png" /></p>
 
 - **Cleaning Dataset**
   
       The inital cleaning steps involved selecting the date and the price column from the dataset. Then, the dataset was filtered to capture data between Sept 2014 - Sept 2016. The format of the date column was changed to Date and the price column was changed to numeric. Preliminary exploration of the data was performed in Excel and from the below chart, we can understand how US Dollar has increasingly become expensive compared to Indian Rupee over a period of 24 months. 
 
-      <p><img src="hw4/trend.png" alt="dataset_trend.png" /></p> 
+      <p><img src="../../assests/images/trend.png" alt="dataset_trend.png" /></p> 
   
 - **Interactive Visualizations**
 
