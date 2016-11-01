@@ -21,7 +21,7 @@ The idea of linking and brushing is to combine different visualization methods t
       <p>Data Source: <a href="http://www.investing.com/currencies/usd-inr-historical-data" target="_blank">USD/INR Historical Data</a></p> 
 
       Dataset snapshot:
-      <p><img src="../_posts/hw4/dataset1.png" alt="usd-inr-historical-data.png" /></p>
+      <p><img src="../../_posts/hw4/dataset1.png" alt="usd-inr-historical-data.png" /></p>
 
 - **Cleaning Dataset**
   
