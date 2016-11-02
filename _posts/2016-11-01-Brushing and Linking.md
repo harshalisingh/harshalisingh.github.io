@@ -21,29 +21,35 @@ The idea of linking and brushing is to combine different visualization methods t
       <p>Data Source: <a href="http://www.investing.com/currencies/usd-inr-historical-data" target="_blank">USD/INR Historical Data</a></p> 
 
       Dataset snapshot:
-      <p><img src="../../assests/images/dataset1.png" alt="usd-inr-historical-data.png" /></p>
+      <p><img src="../../assets/images/dataset1.png" alt="usd-inr-historical-data.png" /></p>
 
 - **Cleaning Dataset**
   
       The inital cleaning steps involved selecting the date and the price column from the dataset. Then, the dataset was filtered to capture data between Sept 2014 - Sept 2016. The format of the date column was changed to Date and the price column was changed to numeric. Preliminary exploration of the data was performed in Excel and from the below chart, we can understand how US Dollar has increasingly become expensive compared to Indian Rupee over a period of 24 months. 
 
-      <p><img src="../../assests/images/trend.png" alt="dataset_trend.png" /></p> 
+      <p><img src="../../assets/images/trend.png" alt="dataset_trend.png" /></p> 
   
 - **Interactive Visualizations**
 
- 1. A interactive visualization using Brush and Zoom technique
+ 1. An interactive visualization using ScatterPlot
 
-      <p>Brush and Zoom: <a href="hw4/inr_usd.html" target="_blank">USD/INR Historical Data</a></p>
+      <p><img src="../../assets/images/scatter.png" alt="scatterplot.png" /></p>
+
+      <p>Brush and Zoom: <a href="https://htmlpreview.github.io/?https://github.com/harshalisingh/harshalisingh.github.io/blob/master/_posts/hw4/inr_usd.html" target="_blank">USD/INR Historical Data</a></p>
 
       </br>
 
- 2. A visualization example of an inappropriate use of Diverging Color Map
+ 2. An interactive visualization using Brush and Zoom technique
 
-      <p><img src="../../assets/images/diverging_bad.png" alt="diverging_bad.png" /></p>
+      <p><img src="../../assets/images/area.png" alt="areaplot.png" /></p>
 
       <p>Data Source: <a href="https://archive.ics.uci.edu/ml/datasets/Turkiye+Student+Evaluation" target="_blank">Turkiye Student Evaluation</a></p>
 
+ 3. An interactive visualization using Parallel coordinates
 
-Source Code of Interactive Visualizations: [Brushing and Linking](https://github.com/harshalisingh/harshalisingh.github.io/tree/master/_posts/sequential)
+      <p><img src="../../assets/images/parallel.png" alt="parallel.png" /></p>
+
+
+Source Code of Interactive Visualizations: [Brushing and Linking](https://github.com/harshalisingh/harshalisingh.github.io/tree/master/_posts/hw4)
 
 Authors: Harshali Singh, Vishal Mehta, Bhavin Vora
