@@ -43,8 +43,6 @@ The idea of linking and brushing is to combine different visualization methods t
 
       <p><img src="../../assets/images/area.png" alt="areaplot.png" /></p>
 
-      <p>Data Source: <a href="https://archive.ics.uci.edu/ml/datasets/Turkiye+Student+Evaluation" target="_blank">Turkiye Student Evaluation</a></p>
-
  3. An interactive visualization using Parallel coordinates
 
       <p><img src="../../assets/images/parallel.png" alt="parallel.png" /></p>
