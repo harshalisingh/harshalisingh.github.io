@@ -35,11 +35,11 @@ The idea of linking and brushing is to combine different visualization methods t
 
       <p><img src="../../assets/images/brushing_bar_pie.png" alt="brushing_and_linking.png" /></p>
 
-      <p>Brush and Zoom: <a href="https://htmlpreview.github.io/?https://github.com/harshalisingh/harshalisingh.github.io/blob/master/_posts/hw4/inr_usd.html" target="_blank">USD/INR Historical Data</a></p>
+      <p>Brush and Zoom: <a href="https://htmlpreview.github.io/?https://github.com/harshalisingh/harshalisingh.github.io/blob/master/_posts/hw4-part2/brushing_bar_pie.html" target="_blank">GDP Visualization</a></p>
 
       </br>
 
 
-Source Code of Interactive Visualizations: [Brushing and Linking](https://github.com/harshalisingh/harshalisingh.github.io/tree/master/_posts/hw4)
+Source Code of Interactive Visualizations: [Brushing and Linking](https://github.com/harshalisingh/harshalisingh.github.io/tree/master/_posts/hw4-part2)
 
 Author: Harshali Singh

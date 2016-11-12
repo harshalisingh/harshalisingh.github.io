@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Brushing and Linking</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/dc.css"/>
+</head>
+<body>
+<h1>Top 7 Countries by GDP - (2010, 2014, 2016)</h1>
+<!--<div class="container">-->
+  <div id="chart-ring-year" style="width:200px; height:300px; margin-left: 30px; margin-right: 10px">
+    <div class="reset" style="visibility: hidden;">selected: <span class="filter"></span>
+      <a href="javascript:yearRingChart.filterAll();dc.redrawAll();">reset</a>
+    </div>
+  </div>
+  <div id="chart-hist-spend" style="width:400px; height:500px">
+    <div class="reset" style="visibility: hidden;">range: <span class="filter"></span>
+      <a href="javascript:spendHistChart.filterAll();dc.redrawAll();">reset</a>
+    </div>
+  </div>
+  <div id="chart-row-spenders" style="width:450px; height:500px">
+    <div class="reset" style="visibility: hidden;">selected: <span class="filter"></span>
+      <a href="javascript:spenderRowChart.filterAll();dc.redrawAll();">reset</a>
+    </div>
+  </div>
+
+<script type="text/javascript" src="js/d3.js"></script>
+<script type="text/javascript" src="js/crossfilter.js"></script>
+<script type="text/javascript" src="js/dc.js"></script>
+<script type="text/javascript">
+var yearRingChart   = dc.pieChart("#chart-ring-year"),
+    spendHistChart  = dc.barChart("#chart-hist-spend"),
+    spenderRowChart = dc.rowChart("#chart-row-spenders");
+// use static or load via d3.csv("gdpData.csv", function(error, gdpData) {/* do stuff */});
+var gdpData = [
+    {Name: 'USA', GDP: '$18000', Year: 2016},
+    {Name: 'China', GDP: '$11000', Year: 2016},
+    {Name: 'Japan', GDP: '$4000', Year: 2016},
+    {Name: 'Germany', GDP: '$3500', Year: 2016},
+    {Name: 'UK', GDP: '$2500', Year: 2016},
+    {Name: 'France', GDP: '$2500', Year: 2016},
+    {Name: 'India', GDP: '$2500', Year: 2016},
+    {Name: 'USA', GDP: '$18000', Year: 2014},
+    {Name: 'China', GDP: '$11000', Year: 2014},
+    {Name: 'Japan', GDP: '$4000', Year: 2014},
+    {Name: 'Germany', GDP: '$3000', Year: 2014},
+    {Name: 'UK', GDP: '$3000', Year: 2014},
+    {Name: 'France', GDP: '$2500', Year: 2014},
+    {Name: 'India', GDP: '$2000', Year: 2014},
+    {Name: 'USA', GDP: '$16000', Year: 2010},
+    {Name: 'China', GDP: '$9000', Year: 2010},
+    {Name: 'Japan', GDP: '$4000', Year: 2010},
+    {Name: 'Germany', GDP: '$3500', Year: 2010},
+    {Name: 'UK', GDP: '$2500', Year: 2010},
+    {Name: 'France', GDP: '$2500', Year: 2010},
+    {Name: 'India', GDP: '$1500', Year: 2010}
+];
+// normalize/parse data
+gdpData.forEach(function(d) {
+    d.GDP = d.GDP.match(/\d+/);
+});
+// set crossfilter
+var ndx = crossfilter(gdpData),
+    yearDim  = ndx.dimension(function(d) {return +d.Year;}),
+    spendDim = ndx.dimension(function(d) {return Math.floor(d.GDP);}),
+    nameDim  = ndx.dimension(function(d) {return d.Name;}),
+    spendPerYear = yearDim.group().reduceSum(function(d) {return +d.GDP;}),
+    spendPerName = nameDim.group().reduceSum(function(d) {return +d.GDP;}),
+    spendHist    = spendDim.group().reduceCount();
+
+yearRingChart
+    .dimension(yearDim)
+    .group(spendPerYear)
+    .innerRadius(50)
+    .controlsUseVisibility(true);
+
+
+  spendHistChart
+    .dimension(spendDim)
+    .group(spendHist)
+    .x(d3.scale.linear().domain([1000,19000]))
+    .xAxisLabel("GDP (Billion $)")
+    .yAxisLabel("Number of Countries")
+    .elasticY(true)
+    .controlsUseVisibility(true);
+
+spendHistChart.xAxis().tickFormat(function(d) {return d}); // convert back to base unit
+spendHistChart.yAxis().ticks(2);
+spenderRowChart
+    .dimension(nameDim)
+    .group(spendPerName)
+    .elasticX(true)
+    .controlsUseVisibility(true);
+
+dc.renderAll();
+ 
+            
+</script>
+
+</div>
+</body>
+</html>
