@@ -27,13 +27,13 @@ The idea of linking and brushing is to combine different visualization methods t
   
       The inital cleaning steps involved selecting the date and the GDP column from the dataset. Then, the dataset was filtered to capture data for Top 7 countries. The format of the date column was changed to Year and the GDP column was changed to numeric. Preliminary exploration of the data was performed in Excel. I have rounded the GDP value to the closest 500 multiple for ease of use.
 
-      <p><img src="../../assets/images/brushing_bar_pie.png" alt="gdp_brushing.png" /></p> 
+      <p><img src="../../assets/images/gdp_sum.png" alt="gdp_sum.png" /></p> 
   
 - **Interactive Visualizations**
 
  1. An interactive visualization using Bar Chart, Pie Chart
 
-      <p><img src="../../assets/images/brushing_bar_pie.png" alt="brushing_and_linking.png" /></p>
+      <p><img src="../../assets/images/brushing_bar_pie.PNG" alt="brushing_and_linking.png" /></p>
 
       <p>Brush and Zoom: <a href="https://htmlpreview.github.io/?https://github.com/harshalisingh/harshalisingh.github.io/blob/master/_posts/hw4-part2/brushing_bar_pie.html" target="_blank">GDP Visualization</a></p>
 
