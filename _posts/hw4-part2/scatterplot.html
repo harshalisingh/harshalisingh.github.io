@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Time Series</title>
+  <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+  <script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
+  <script type="text/javascript" src="http://d3js.org/topojson.v1.min.js"></script>
+</head>
+<style type="text/css">
+  svg {
+    font: 10px sans-serif;
+  }
+
+  path {
+    fill: steelblue;
+  }
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+
+  .brush .extent {
+    stroke: #fff;
+    fill-opacity: .125;
+    shape-rendering: crispEdges;
+  }
+
+  div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 10px;
+    height: 10px;
+    padding: 2px;
+    font-size: 10px;
+    background: #FFFFE0;
+    border: 1px;
+    border-radius: 8px;
+    pointer-events: none;
+  }
+
+</style>
+
+<body>
+<h1>Boston Temperature (Nov 2, 2016 - Nov 8, 2016)</h1>
+  <script type="text/javascript">
+
+    var div = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
+    var margin = {top: 100, right: 50, bottom: 100, left: 80},
+    margin2 = {top: 430, right: 10, bottom: 20, left: 80},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom,
+    height2 = 500 - margin2.top - margin2.bottom;
+
+    var data = [
+    {'Wed Nov 02 00:00:00 EST 2016': 54}, 
+    {'Wed Nov 02 06:00:00 EST 2016': 63}, 
+    {'Wed Nov 02 12:00:00 EST 2016': 70}, 
+    {'Wed Nov 02 18:00:00 EST 2016': 57}, 
+    {'Wed Nov 03 00:00:00 EST 2016': 54}, 
+    {'Thu Nov 03 06:00:00 EST 2016': 57}, 
+    {'Thu Nov 03 12:00:00 EST 2016': 63}, 
+    {'Thu Nov 03 18:00:00 EST 2016': 55}, 
+    {'Fri Nov 04 00:00:00 EST 2016': 52}, 
+    {'Fri Nov 04 06:00:00 EST 2016': 55},
+    {'Fri Nov 04 12:00:00 EST 2016': 55},
+    {'Fri Nov 04 18:00:00 EST 2016': 52},
+    {'Sat Nov 05 00:00:00 EST 2016': 39},
+    {'Sat Nov 05 06:00:00 EST 2016': 48},
+    {'Sat Nov 05 12:00:00 EST 2016': 55},
+    {'Sat Nov 05 18:00:00 EST 2016': 54},
+    {'Sun Nov 06 00:00:00 EST 2016': 52},
+    {'Sun Nov 06 06:00:00 EST 2016': 48},
+    {'Sun Nov 06 12:00:00 EST 2016': 46},
+    {'Sun Nov 06 18:00:00 EST 2016': 46},
+    {'Mon Nov 07 00:00:00 EST 2016': 43},
+    {'Mon Nov 07 06:00:00 EST 2016': 46},
+    {'Mon Nov 07 12:00:00 EST 2016': 46},
+    {'Mon Nov 07 18:00:00 EST 2016': 43},
+    {'Tue Nov 08 00:00:00 EST 2016': 39},
+    {'Tue Nov 08 06:00:00 EST 2016': 57},
+    {'Tue Nov 08 12:00:00 EST 2016': 57},
+    {'Tue Nov 08 18:00:00 EST 2016': 52}
+    ];
+
+    var format = d3.time.format("%a %b %d %H:%M:%S EST %Y");
+
+    var parseDate = d3.time.format("%b %Y").parse;
+
+    var x = d3.time.scale().range([0, width]),
+    x2 = d3.time.scale().range([0, width]),
+    y = d3.scale.linear().range([height, 0]),
+    y2 = d3.scale.linear().range([height2, 0]);
+
+    var xAxis = d3.svg.axis().scale(x).orient("bottom"),
+    xAxis2 = d3.svg.axis().scale(x2).orient("bottom"),
+    yAxis = d3.svg.axis().scale(y).orient("left");
+
+    var brush = d3.svg.brush()
+    .x(x2)
+    .on("brush", brush);
+
+    var area = d3.svg.area()
+    .interpolate("monotone")
+    .x(function(d) { return x(format.parse(d3.keys(d)[0])); })
+    .y0(height)
+    .y1(function(d) { return y(d3.values(d)[0]); });
+
+    var area2 = d3.svg.area()
+    .interpolate("monotone")
+    .x(function(d) { return x2(format.parse(d3.keys(d)[0])); })
+    .y0(height2)
+    .y1(function(d) { return y2(d3.values(d)[0]); });
+
+    var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom);
+
+    svg.append("defs").append("clipPath")
+    .attr("id", "clip")
+    .append("rect")
+    .attr("width", width)
+    .attr("height", height);
+
+    var focus = svg.append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var context = svg.append("g")
+    .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
+
+    x.domain(d3.extent(data.map(function(d) { return format.parse(d3.keys(d)[0]); })));
+    y.domain([0, d3.max(data.map(function(d) { return d3.values(d)[0]; }))]);
+    x2.domain(x.domain());
+    y2.domain(y.domain());
+
+    focus.append("path")
+    .datum(data)
+    .attr("clip-path", "url(#clip)")
+    .attr("d", area);
+
+    focus.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
+
+    focus.append("g")
+    .attr("class", "y axis")
+    .call(yAxis);
+
+    context.append("path")
+    .datum(data)
+    .attr("d", area2);
+
+    context.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height2 + ")")
+    .call(xAxis2);
+
+    context.append("g")
+    .attr("class", "x brush")
+    .call(brush)
+    .selectAll("rect")
+    .attr("y", -6)
+    .attr("height", height2 + 7);
+
+    var circlegroup = focus.append("g");
+    circlegroup.attr("clip-path", "url(#clip)");
+    circlegroup.selectAll('.dot')
+    .data(data)
+    .enter().append("circle")
+    .attr('class', 'dot')
+    .attr("cx",function(d){ return x(format.parse(d3.keys(d)[0]));})
+    .attr("cy", function(d){ return y(d3.values(d)[0]);})
+    .attr("r", function(d){ return 4;})
+    .on('mouseover', function(d){ 
+      d3.select(this).attr('r', 8);
+      div.transition()    
+      .duration(200)    
+      .style("opacity", .9);    
+      console.log(y(d3.values(d)[0]));
+      div .html(d3.values(d)[0])  
+      .style("left", (d3.event.pageX) + "px")   
+      .style("top", (d3.event.pageY - 28) + "px"); 
+
+    })
+    .on('mouseout', function(d){ 
+      d3.select(this).attr('r', 4);
+      d3.select(this)
+      .transition().duration(300)
+      .style("opacity", 0.8);
+      div.transition().duration(300)
+      .style("opacity", 0);
+    });    
+
+    function brush() {
+      x.domain(brush.empty() ? x2.domain() : brush.extent());
+      focus.select("path").attr("d", area);
+      focus.select(".x.axis").call(xAxis);
+      circlegroup.selectAll(".dot").attr("cx",function(d){ return x(format.parse(d3.keys(d)[0]));}).attr("cy", function(d){ return y(d3.values(d)[0]);});
+    }
+
+  </script>
+</body>

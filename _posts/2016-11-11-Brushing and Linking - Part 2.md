@@ -17,8 +17,11 @@ The idea of linking and brushing is to combine different visualization methods t
 - **Dataset**
 
       I have selected the GDP information of Top 7 countries (by GDP) during the year 2013, 2015 and 2016.
+      For the second visualization, I have used the Boston temperature data for the past week (Nov 2, 2016 - Nov 8, 2016).
 
       <p>Data Source: <a href="http://statisticstimes.com/economy/countries-by-projected-gdp.php" target="_blank">List of Countries by Projected GDP</a></p> 
+
+      <p>Data Source: <a href="http://www.usclimatedata.com/climate/boston/massachusetts/united-states/usma0046" target="_blank">Boston Temperature Data</a></p> 
 
       Dataset snapshot:
       <p><img src="../../assets/images/gdp_dataset.png" alt="projected-gdp.png" /></p>
@@ -40,6 +43,15 @@ The idea of linking and brushing is to combine different visualization methods t
       </br>
 
       <p><img src="../../assets/images/brushing_bar_pie.PNG" alt="brushing_and_linking.png" /></p>
+
+ 2. An interactive visualization of Brushing and Linking using Area Chart
+      I have tried to represent the technique of Brushing and Linking using an area chart with a timeline at the bottom of the chart which can be selected using a brush. The data points are represented by black circles which when hovered on provides the exact temperature (Detail-on-Demand) recorded for that time. 
+
+      <p>Link to Visualization: <a href="https://htmlpreview.github.io/?https://github.com/harshalisingh/harshalisingh.github.io/blob/master/_posts/hw4-part2/scatterplot.html" target="_blank">Temperature Visualization</a></p>
+
+      </br>
+
+      <p><img src="../../assets/images/temp.png" alt="brushing_and_linking.png" /></p>
 
 - **Design Decisions**
       Bar chart was a good choice here to represent the information regarding the Total GDP Vs Country as we have few categories (7) however a range of numerical values for the GDP. 
