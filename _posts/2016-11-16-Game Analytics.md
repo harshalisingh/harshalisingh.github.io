@@ -30,6 +30,11 @@ analytics: true
 - **Design Decisions**
       The visualization is interactive as we can move the nodes around to visualize the edges clearly as well as the graph rearranges itself after any interaction. A user can take multiple paths from one node to another including different steps so a dynamic visualization is a better choice here as it provides a way to change the orientation of the nodes to view overlapping edges clearly. I used numbers as labels on the edges to represent the chronological order as it helps to bring information closer to the visualization while keeping the clutter in the graph to minimum. Usage of different strokes for the edges eliminates the need of labeling the edges with step type without losing any data. I chose to represent the edges as an arc instead of straight line because there are multiple edges between some nodes (e.g. node A and node C), and arcs with different radius solves the issue of overlapping edges.
 
+- **References**
+      <a href="http://bl.ocks.org/mbostock/1153292" target="_blank">Mobile Patent Suits</a>
+      <a href="http://bl.ocks.org/mfolnovic/6269308/5c017c0391a8e12db1fc573be3ef8a9bdcb5a117" target="_blank">Force Directed Graph with Multiple Edges</a>
+
+
 Source Code of Interactive Visualization: [HW 5 : Game Analytics](https://github.com/harshalisingh/harshalisingh.github.io/tree/master/_posts/hw5)
 
 Author: Harshali Singh
