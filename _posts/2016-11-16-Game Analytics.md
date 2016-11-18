@@ -12,9 +12,9 @@ analytics: true
 
 - **Dataset**
 
-      *adjacenecy-matrix.csv : Data to represent the graph
-      *edge-list.csv : Data to represent the edges in the graph 
-      *game-log.csv : The player's actions (in chronological order)
+      - adjacenecy-matrix.csv : Data to represent the graph
+      - edge-list.csv : Data to represent the edges in the graph 
+      - game-log.csv : The player's actions (in chronological order)
   
 - **Interactive Visualizations**
 
